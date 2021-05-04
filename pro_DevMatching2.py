@@ -1,4 +1,4 @@
-# 프로그래머스 Dev-Matching(백엔드)
+# 프로그래머스
 # [카카오 인턴] 수식 최대화
 # https://programmers.co.kr/learn/courses/30/lessons/67257
 
