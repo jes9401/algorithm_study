@@ -1,3 +1,5 @@
+# 프로그래머스 체육복
+# https://programmers.co.kr/learn/courses/30/lessons/42862
 def solution(n, lost, reserve): 
     set_reserve=set(reserve)-set(lost) 
     set_lost = set(lost)-set(reserve)
