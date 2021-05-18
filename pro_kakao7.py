@@ -1,0 +1,19 @@
+# 프로그래머스 카카오 블라인드
+# 비밀지도 https://programmers.co.kr/learn/courses/30/lessons/17681
+
+def solution(n, arr1, arr2):
+    answer = []
+    for i in range(len(arr1)):
+        temp=""
+        num1 = bin(arr1[i])[2:].zfill(n)
+        num2 = bin(arr2[i])[2:].zfill(n)
+        for j in range(len(num1)):
+            if num1[j] == "0" and num2[j]=="0":
+                temp+=" "
+            elif num1[j]=="1" or num2[j]=="1":
+                temp+="#"
+        answer.append(temp)
+    return answer
+
+print(solution(5,[9, 20, 28, 18, 11],[30, 1, 21, 17, 28]))
+print(solution(6,[46, 33, 33 ,22, 31, 50],[27 ,56, 19, 14, 14, 10]))
