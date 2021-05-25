@@ -44,6 +44,7 @@ def solution(expression):
     for x in temp3:
         temp_ga = temp.copy() # 리스트 형태로 계산하기 위해서 copy
         for y in x:
+            # temp_ga 내에 해당 기호가 있으면 계속 반복(우선 순위)
             while y in temp_ga:
                 index=temp_ga.index(y)
                 result = cal(temp_ga[index-1], temp_ga[index+1], temp_ga[index])
@@ -58,7 +59,7 @@ def solution(expression):
     return max_num
 
 
-# print(solution("100-200*300-500+20"))
+print(solution("100-200*300-500+20"))
 # print(solution("50*6-3*2"))
 # print(solution("200-300-500-600*40+500+500"))
 # print(solution("177-661*999*99-133+221+334+555-166-144-551-166*166-166*166-133*88*55-11*4+55*888*454*12+11-66+444*99"))

@@ -5,11 +5,16 @@ def solution(n, arr1, arr2):
     answer = []
     for i in range(len(arr1)):
         temp=""
+        # bin 함수를 통해 i번째 원소를 이진수로 변환
+        # zfill 함수를 통해 n만큼 자릿수를 맞춰줌(왼쪽에 0 추가)
         num1 = bin(arr1[i])[2:].zfill(n)
         num2 = bin(arr2[i])[2:].zfill(n)
+        
         for j in range(len(num1)):
+            # 둘 다 0일 경우 공백 추가
             if num1[j] == "0" and num2[j]=="0":
                 temp+=" "
+            # 하나라도 1일 경우 # 추가
             elif num1[j]=="1" or num2[j]=="1":
                 temp+="#"
         answer.append(temp)
