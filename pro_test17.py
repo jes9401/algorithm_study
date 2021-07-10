@@ -22,5 +22,7 @@ def solution(name):
 # 오른 - 커서 오른쪽 이동
 # A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
 
+# 왼쪽 오른쪽 어느쪽으로 가는게 좋을지 판별해야될듯?
+
 print(solution("JEROEN"))
 print(solution("JAN"))
