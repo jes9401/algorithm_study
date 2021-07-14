@@ -1,15 +1,20 @@
 # 프로그래머스 
 # 조이스틱 https://programmers.co.kr/learn/courses/30/lessons/42860?language=python3
-# 해결
+# 미해결
 
 
 
 def solution(name):
-    answer = 0
-    print(name)
+    answer= 0
     temp = [ord(x) for x in name]
     move = [min([ord(y)-65, 90-ord(y)+1]) for y in name]
-    return move
+
+    left, right = 0,0
+    if move.count(0)==0:
+        answer = sum(move)+len(name)-1
+    #else:
+        
+    return answer
 # sum(move)+len(name)-1
 # A => 65
 # Z => 90
@@ -22,7 +27,6 @@ def solution(name):
 # 오른 - 커서 오른쪽 이동
 # A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
 
-# 왼쪽 오른쪽 어느쪽으로 가는게 좋을지 판별해야될듯?
 
 print(solution("JEROEN"))
 print(solution("JAN"))
