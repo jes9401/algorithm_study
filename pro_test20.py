@@ -1,3 +1,7 @@
-# í”„ë¡œê·¸ëž˜ë¨¸ìŠ¤ 
-# ê°€ìž¥ í° ìˆ˜ https://programmers.co.kr/learn/courses/30/lessons/42746
- 
+# ºÎÁ·ÇÑ ±Ý¾× °è»êÇÏ±â
+def solution(price, money, count):
+    answer = -1
+    num = sum([(x+1)*price for x in range(count)])
+    return num-money if num-money>0 else 0
+
+print(solution(3,20,4))
