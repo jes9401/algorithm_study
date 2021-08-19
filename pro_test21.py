@@ -1,3 +1,4 @@
+# toss 1¹ø
 def solution(name_list):
     temp = {}
     num = 65
