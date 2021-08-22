@@ -1,1 +1,10 @@
-# 코딩테스트 1번
+# 1번
+def solution(n):
+    temp =[]
+    for i in range(1,n):
+        temp.append((n*i)+i)
+    return sum(temp)
+
+
+print(solution(2)) # 3
+print(solution(3)) # 12
