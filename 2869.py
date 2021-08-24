@@ -1,3 +1,4 @@
+# 
 A,B,V=map(int,input().split(" "))
 
 i=(V-B)/(A-B)
