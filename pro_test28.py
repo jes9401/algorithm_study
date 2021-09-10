@@ -1,30 +1,24 @@
 # 프로그래머스
 # JadenCase 문자열 만들기 https://programmers.co.kr/learn/courses/30/lessons/12951
-# 미해결
-
-# def solution(s):
-#     word_list = s.split()
-#     for i in range(len(word_list)):
-#         word_list[i] = word_list[i].lower()
-#         if word_list[i][0].isalpha():
-#             word_list[i] = list(word_list[i])
-#             word_list[i][0] = word_list[i][0].upper()
-#             word_list[i] = "".join(word_list[i])
-#     answer = " ".join(word_list)
-#     return answer
 
 
-
+def up(s):
+    return s.upper()
 def solution(s):
-    word_list = s.split()
-    for i in range(len(word_list)):
-        word_list[i] = word_list[i].lower()
-        word_list[i] = list(word_list[i])
-        word_list[i][0] = word_list[i][0].upper()
-        word_list[i] = "".join(word_list[i])
-    answer = " ".join(word_list)
-    return answer
+    # 우선 전체적으로 소문자로 변경 
+    s = s.lower()
+    s = list(s)
+    # 맨 처음 글자는 무조건 대문자로 변경
+    s[0] = up(s[0])
+    for i in range(len(s)):
+        # 공백이 아니고 이전의 문자열이 공백이면 단어의 첫 글자로 인식
+        if s[i] != " ":
+            if i != 0 and s[i-1] == " ":
+                s[i] = up(s[i])
+    return "".join(s)
 
-print(solution("33people   unFollowed              me"))
-print(solution("for the las t w3eek"))
+
+
+print(solution("33people   unFollowmeed              me"))
+print(solution(" for the las t w3eek"))
 
