@@ -1,22 +1,37 @@
 import sys
+from math import sqrt
 a,b=map(int,sys.stdin.readline().rstrip().split())
+answer = 0
 
-
-result=0
-for i in range(a,b+1):
-    N=i
-    num=2
-    temp=0
-    while num<=N:
-        if N%num==0:
-            temp+=1
-            N//=num
+def factorization(x):
+    d = 2 
+    count = 0
+    while d <= x: 
+        if x % d == 0: 
+            count += 1 
+            x = x / d 
         else:
-            num+=1
-    count=0
-    for j in range(2,temp):
-        if temp%j==0:
-            count=1
-    if count!=1:
-        result+=1
-print(result)
+            d = d + 1
+    return count
+
+def prime(n):
+    if n == 1:
+        return False
+    if n == 2:
+        return True
+    if n % 2 == 0:
+        return False
+        
+
+    for i in range(3, int(sqrt(n))+1, 2):
+        if n % i == 0:
+            return False
+    return True
+
+for x in range(a,b+1):
+    if prime(factorization(x)):
+        answer +=1
+
+dp = [0 for _ in range(100001)]
+print(len(dp))
+    
