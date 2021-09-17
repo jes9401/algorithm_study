@@ -2,7 +2,7 @@
 # 순위 검색 https://programmers.co.kr/learn/courses/30/lessons/72412
 # 효율성 미통과
 
-def solution(info, query):
+def solution1(info, query):
     answer = []
     info = list(map(lambda x: x.split(" "), info))
     query = list(map(lambda x: x.replace("and", " "), query))
@@ -46,7 +46,7 @@ def solution2(info, query):
     return answer
 
 
-def solution3(info, query):
+def solution(info, query):
     answer = []
     info_list = []
     for i in range(len(info)):
@@ -66,6 +66,6 @@ def solution3(info, query):
     return answer
 
 # [1,1,1,1,2,4]
-print(solution3(["java backend junior pizza 150","python frontend senior chicken 210","python frontend senior chicken 150","cpp backend senior pizza 260","java backend junior chicken 80","python backend senior chicken 50"]
+print(solution(["java backend junior pizza 150","python frontend senior chicken 210","python frontend senior chicken 150","cpp backend senior pizza 260","java backend junior chicken 80","python backend senior chicken 50"]
 , ["java and backend and junior and pizza 100","python and frontend and senior and chicken 200","cpp and - and senior and pizza 250","- and backend and senior and - 150","- and - and - and chicken 100","- and - and - and - 150"]))
 
